@@ -1,19 +1,32 @@
-*{
-    font-family:"Courier New";
-
+#box1{
+    width: 100px;
+    height: 100px;
+    background:green ;
+    transition: width 2s ease-in 0.5s;
 }
 
-h1,h3{
-    color: #b92b27;
+#box1:hover{
+    width: 600px
 }
-#login{
-    background-color: white;
+
+#box2{
+    width: 100px;
+    height: 100px;
+    background: red;
+    transform: translate(200px,200px) rotate(90deg);
 }
-#signup{
-    background-color:#b92b27 ;
-    color:white;
+
+#box3{
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    transform: skew(20deg);
 }
-.upvote{
-    background-color: green;
-    color:white;
+
+#box4{
+    width: 100px;
+    height: 100px;
+    background: lightgreen;
+    box-shadow: 2px 2px 5px green;
 }
+
