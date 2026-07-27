@@ -42,3 +42,67 @@ for(let i =0;i<arr1.length;i++){
 
 }
 console.log(largeint);
+//Q5
+
+function unique(str){
+    let ans="";
+    for(let i =0;i<str.length;i++){
+        let currchar=str[i]
+        if(ans.indexOf(currchar)==-1){
+            ans+=currchar;
+
+        }
+    }
+    return ans;
+}
+unique(str);
+//Q6
+let country=["Australia","Germany","India",'Canada"']
+function longestname(country){
+    ansIdx=0;
+    for(let i=0;i<country.length;i++){
+        let ansLen = country[ansIdx].length;
+        let currLen = country[i].length;
+        if(currLen>ansLen){
+            ansIdx=i;
+        }
+    }
+    return country[ansIdx];
+}
+longestname(country);
+//Q7
+let str="Prakriti"
+function countVowels(str){
+    let count =0;
+    for(let i =0;i<str.length;i++){
+        let char=str[i];
+        if(
+            char=="a"||
+            char=="u"||
+            char=="i"||
+            char=="e"||
+            char=="o"
+
+        ){
+            count++;
+        }
+    }
+    return count;
+
+}
+//Q8
+let start=100;
+let end =200;
+function generateRandom(start,end){
+    let diff = end-start;
+    return Math.floor(Math.random()*diff)+start
+}
+//Q9
+let id=setInterval(()=>{
+    console.log("Hello World");
+},2000);
+
+setTimeout(()=>{
+    clearInterval(id);
+    console.log("clear interval ran");
+},10000);
