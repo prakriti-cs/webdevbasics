@@ -106,3 +106,26 @@ setTimeout(()=>{
     clearInterval(id);
     console.log("clear interval ran");
 },10000);
+//Q10
+let nums =[1,2,3,4,5];
+const square=nums.map((num)=>num*num);
+console.log(square);
+
+let sum1=square.reduce((acc,curr)=>acc+curr,0);
+let avg=sum/nums.length;
+console.log(avg);
+//Q11
+let nums2=[10,20,30,40,50];
+const plus5=nums2.map((num)=>num+5);
+console.log(plus5);
+
+let chars=['a','b','c','d'];
+const upperCase=chars.map((char)=>char.toUpperCase());
+
+const doubleAndReturnArgs = (arr, ...args) =>[
+    ...arr,
+    ...args.map((v)=>v*2),
+];
+
+const mergeObjects =(obj1,obj2)=> ({...obj1,...obj2});
+mergeObjects({a:1,b:2},{c:3,d:4});
