@@ -43,3 +43,12 @@ document.querySelector("body").append(h1);
 let p=document.createElement("p");
 p.innerHTML="<b>practice</b>";
 document.querySelector("body").append(p);
+
+let inp = document.querySelector("input");
+inp.addEventListener("keydown",function(event)){
+    console.log("code=", event.code);
+    if(event.code =="KeyU"){
+        console.log("character moves up");
+    }
+    
+    }
