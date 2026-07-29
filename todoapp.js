@@ -1,31 +1,28 @@
-let todo =[];
-let req = prompt("Please enter your choice");
+let btn = document.querySelector("button");
+let  ul = document.querySelector("ul");
+let inp = document.querySelector("input");
+
+btn.addEventListener("click",function(){
+    let item = document.createElement("li"); //list item added
+    item.innerText =inp.value; //value assigned, text shows on screen 
+
+    let delbtn = document.createElement("button");
+    delbtn.innerText="delete"; 
+    delbtn.classList.add("delete");
+
+    item.appendChild(delbtn);
+
+    ul.appendChild(item); //list mein item added 
+    inp.value="";//removes input from placeholder
+});
 
 
-while(true){
-    console.log("User entered:", req);
-    if(req=="quit"){
-        console.log("quitting app");
-        break;
+ul.addEventListener("click",function(event){
+    if(event.target.nodeName == "BUTTON"){
+        let listItem = event.target.parentElement;
+        listItem.remove();
+        console.log("deleted");
     }
-    if(req =="list"){
-        console.log("_________________");
-        for(let i =0;i<todo.length;i++){
-            console.log(i,todo[i]);
-        }
-        console.log("________________");
-    } else if(req=="add"){
-        let task = prompt("please enter the task you want to add");
-        todo.push(task);
-        console.log("task added");
-    } else if(req == "delete"){
-        let idx = parseInt(prompt("please enter the task index"));
-        todo.splice(idx,1);
-        console.log("task deleted");
-    }
-    else{
-        console.log("wrong request");
-    }
-    //Ask Again
-    req=prompt("Please enter your choice");
-}
+
+
+});
