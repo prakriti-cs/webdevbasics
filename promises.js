@@ -73,7 +73,7 @@ function changeColor(color,delay){
         },delay);
     });
 }
-
+//to handle rejections , writing await code in try and catch is good
 async function demo(){
     try{
         await changeColor("red",1000);
